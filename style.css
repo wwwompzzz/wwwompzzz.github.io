@@ -1,0 +1,119 @@
+/* Reset + Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+body {
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    background: linear-gradient(to bottom right, #f8fbff, #eaf0f9);
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #0b3d91;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.nav-links a:hover{
+    color: #0b3d91
+}
+
+/* Dropdowns */
+.dropdown{
+    position: relative;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 35px;
+    left: 0;
+    list-style: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 150px;
+}
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+}
+.dropdown-menu li a:hover{
+    background: #f0f4ff;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    padding: 40px;
+}
+.hero-content {
+    max-width: 700px;
+}
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #555;
+}
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+.cta {
+    background: #0066ff;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.cta:hover {
+    background: #004dcc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
